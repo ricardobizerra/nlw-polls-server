@@ -1,9 +1,8 @@
-import { PrismaClient } from '@prisma/client';
 import fastify from 'fastify';
 import { z } from 'zod';
+import { prisma } from '../lib/prisma';
 
 const app = fastify();
-const prisma = new PrismaClient();
 
 app.get('/health', () => {
     return 'ok!';
